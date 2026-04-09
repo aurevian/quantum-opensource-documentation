@@ -11,7 +11,7 @@ site:
   title: "Eren Bozkurt"
   template: book-theme
   options:
-    style: myst-custom.css
+    style: ./myst-custom.css
     hide_footer_links: true
     hide_toc: false
     outline_maxdepth: 3
