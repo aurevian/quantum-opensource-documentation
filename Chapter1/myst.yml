@@ -1,0 +1,21 @@
+version: 1
+
+project:
+  id: ca6907c2-9ebf-4dd7-86b3-92b2e096f009
+  title: ""
+  toc:
+    - file: bolum_0_tr.md
+    - file: bolum_0_en.md
+
+site:
+  title: "Eren Bozkurt"
+  template: book-theme
+  options:
+    style: myst-custom.css
+    hide_footer_links: true
+    hide_toc: false
+    outline_maxdepth: 3
+    logo_text: "Eren Bozkurt"
+  parts:
+    primary_sidebar_footer: sidebar-footer.md
+    footer: sidebar-footer.md

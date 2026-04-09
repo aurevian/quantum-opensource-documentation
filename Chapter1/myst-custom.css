@@ -1,0 +1,201 @@
+/* =========================================================
+   MyST / Jupyter Book – Custom Theme
+   Author: Eren Bozkurt
+   ========================================================= */
+
+:root {
+  --accent: #4a6fa5;
+  --accent-light: #e8eef6;
+  --accent-dark: #344e73;
+  --text-primary: #2c2c2c;
+  --text-secondary: #555;
+  --border-soft: #e0e0e0;
+}
+
+/* ===================== 1) LEFT SIDEBAR: NUKE ENTIRELY ===================== */
+.primary-sidebar,
+.sidebar-primary,
+.bd-sidebar,
+.bd-sidebar-primary,
+nav.bd-links,
+aside.primary-sidebar,
+[class*="sidebar-primary"],
+[class*="primary-sidebar"] {
+  display: none !important;
+  width: 0 !important;
+  min-width: 0 !important;
+  max-width: 0 !important;
+  overflow: hidden !important;
+}
+
+/* ===================== 2) DUPLICATE TITLE: HIDE AUTO-GENERATED ===================== */
+article > header,
+article .title-block,
+article .page-title,
+.frontmatter,
+.heading-permalink:first-of-type,
+article > .cell:first-child > .title-block,
+[class*="title-block"],
+[class*="frontmatter"] {
+  display: none !important;
+}
+
+/* ===================== 3) HIDE ONLY DEFAULT MyST BRANDING LINKS ===================== */
+a[href*="mystmd.org"],
+a[href*="made-with-myst"],
+a[href="/made-with-myst"],
+a[href$="made-with-myst"],
+[aria-label*="Made with MyST"],
+[title*="Made with MyST"],
+[class*="made-with"],
+[id*="made-with"] {
+  display: none !important;
+}
+
+/* ===================== 4) FORCE TOP BRAND TEXT VISIBLE ===================== */
+.header-bar .site-title,
+.topbar .site-title,
+nav.topbar a.site-name,
+a.navbar-brand,
+.site-brand,
+.topbar a[href="/"],
+.topbar .home-link {
+  display: inline-flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* ===================== KEEP: Language Switcher top-left ===================== */
+.language-switcher {
+  position: fixed;
+  top: 7px;
+  left: 14px;
+  z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.75rem;
+  background: var(--accent-light);
+  border: 1px solid var(--border-soft);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.language-switcher-label {
+  color: var(--text-secondary);
+  margin-right: 0.1rem;
+}
+
+.language-switcher a {
+  text-decoration: none !important;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  color: var(--accent-dark);
+  transition: all 0.2s ease;
+}
+
+.language-switcher a:hover {
+  background: rgba(74, 111, 165, 0.12);
+}
+
+.language-switcher a.active {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ===================== KEEP: Typography ===================== */
+article h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+article h4 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--accent-dark);
+  margin-top: 2rem;
+}
+
+article h5 {
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+/* ===================== KEEP: Right sidebar (Contents) ===================== */
+.margin-sidebar,
+.secondary-sidebar,
+.toc-sidebar,
+aside.toc,
+nav.onthispage,
+nav.page-toc,
+.table-of-contents,
+[aria-label="On this page"],
+[aria-label="Table of Contents"] {
+  display: block !important;
+  visibility: visible !important;
+}
+
+.toc-title {
+  font-weight: 600;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+}
+
+/* ===================== KEEP: Theme toggle ===================== */
+.theme-switch,
+.theme-toggle,
+[class*="theme-switch"],
+[class*="theme-toggle"],
+button[aria-label*="theme"],
+button[aria-label*="Theme"],
+button[aria-label*="dark"],
+button[aria-label*="light"],
+button[aria-label*="mode"] {
+  display: inline-flex !important;
+  visibility: visible !important;
+}
+
+/* ===================== KEEP: Download hide ===================== */
+a[download],
+button[download],
+[aria-label*="Download"],
+[aria-label*="download"],
+[title*="Download"],
+[title*="download"],
+button[class*="download"],
+a[class*="download"] {
+  display: none !important;
+}
+
+/* ===================== KEEP: Site footer hide ===================== */
+.site-footer,
+.page-footer,
+footer.footer {
+  display: none !important;
+}
+
+/* ===================== KEEP: Math / Body / Blockquote ===================== */
+.math-display,
+mjx-container[display="true"] {
+  margin: 1.3rem 0;
+}
+
+article {
+  line-height: 1.72;
+  color: var(--text-primary);
+}
+
+blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+  color: var(--text-secondary);
+  margin: 1rem 0;
+}
