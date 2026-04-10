@@ -87,7 +87,8 @@ https://username.github.io/repo-name
 
 ## 🗺️ Roadmap
 
-- [] *Data–Output Oriented Problem Typology in Quantum Machine Learning*
+- [x] *Data–Output Oriented Problem Typology in Quantum Machine Learning*
+- [ ] *Data Encoding in Quantum Machine Learning: Theoretical Foundations and Applications*
 
 
 ---
